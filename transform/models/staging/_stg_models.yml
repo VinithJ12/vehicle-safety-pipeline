@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_complaints
+    description: Cleaned, typed vehicle complaints. One row per complaint x component.
+    columns:
+      - name: complaint_component_id
+        description: Unique key for complaint x component
+        tests: [unique, not_null]
+      - name: complaint_id
+        tests: [not_null]
+      - name: make
+        tests: [not_null]
+      - name: received_date
+        tests: [not_null]

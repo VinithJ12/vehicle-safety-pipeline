@@ -1,0 +1,12 @@
+vehicle_safety:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: "{{ env_var('POSTGRES_PORT') | as_number }}"
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      dbname: "{{ env_var('POSTGRES_DB') }}"
+      schema: analytics
+      threads: 4

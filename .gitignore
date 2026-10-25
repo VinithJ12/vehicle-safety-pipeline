@@ -222,3 +222,8 @@ __marimo__/
 # project-specific
 data/
 *.zip
+
+# dbt
+transform/target/
+transform/logs/
+transform/dbt_packages/

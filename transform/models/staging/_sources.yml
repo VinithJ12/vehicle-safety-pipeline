@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: nhtsa_raw
+    schema: raw
+    description: Raw NHTSA flat files loaded by src/load_raw.py
+    tables:
+      - name: complaints
+        columns:
+          - name: odino
+            tests: [not_null]
+      - name: recalls
+      - name: investigations
