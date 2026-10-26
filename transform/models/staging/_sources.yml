@@ -11,3 +11,12 @@ sources:
             tests: [not_null]
       - name: recalls
       - name: investigations
+
+  - name: nlp
+    schema: nlp
+    description: Complaint topics produced by notebooks/02_nlp.ipynb
+    tables:
+      - name: complaint_topics
+        columns:
+          - name: complaint_id
+            tests: [unique, not_null]

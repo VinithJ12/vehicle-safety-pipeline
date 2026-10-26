@@ -10,3 +10,11 @@ models:
         tests: [unique, not_null]
       - name: complaints
         tests: [not_null]
+
+  - name: mart_monthly_vehicle_topic
+    description: >
+      Monthly complaint counts per make x model x NLP defect topic (series with 30+ complaints),
+      zero-filled, with a trailing 12-month baseline and spike flag.
+    columns:
+      - name: series_month_id
+        tests: [unique, not_null]
